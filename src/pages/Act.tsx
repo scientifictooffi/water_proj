@@ -12,7 +12,7 @@ export function Act() {
 
   return (
     <section className="mx-auto max-w-6xl px-4 py-12">
-      <h1 className="text-3xl font-extrabold md:text-5xl">Как помочь</h1>
+      <h1 className="text-2xl font-extrabold md:text-4xl">Как помочь</h1>
       <p className="mt-3 max-w-2xl text-aqua/80">Три уровня: дом, сообщество, мир. Начни с того, что под рукой.</p>
 
       <h2 className="mt-12 text-2xl font-bold">🏠 Дома: калькулятор привычек</h2>

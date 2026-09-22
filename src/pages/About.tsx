@@ -5,7 +5,7 @@ export function About() {
   const results = loadResults()
   return (
     <section className="mx-auto max-w-6xl px-4 py-12">
-      <h1 className="text-3xl font-extrabold md:text-5xl">О проекте</h1>
+      <h1 className="text-2xl font-extrabold md:text-4xl">О проекте</h1>
       <p className="mt-3 max-w-2xl text-aqua/80">
         «Капля» — интерактивная новелла и справочник по Цели устойчивого развития 6: обеспечить наличие и рациональное использование водных ресурсов и санитарии для всех.
       </p>

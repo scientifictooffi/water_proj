@@ -7,7 +7,7 @@ export function Media() {
   const list = videos.filter((v) => topic === 'Все' || v.topic === topic)
   return (
     <section className="mx-auto max-w-6xl px-4 py-12">
-      <h1 className="text-3xl font-extrabold md:text-5xl">Медиатека</h1>
+      <h1 className="text-2xl font-extrabold md:text-4xl">Медиатека</h1>
       <p className="mt-3 max-w-2xl text-aqua/80">Документальные фильмы и короткие ролики от UN, UNICEF, WaterAid и научно-популярных каналов.</p>
       <div className="mt-6 flex flex-wrap gap-2">
         {topics.map((t) => <button key={t} onClick={() => setTopic(t)} className={`rounded-full px-4 py-2 text-sm font-semibold ${topic === t ? 'bg-teal text-deep' : 'glass hover:bg-white/10'}`}>{t}</button>)}

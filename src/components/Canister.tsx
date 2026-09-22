@@ -33,7 +33,7 @@ export function Canister({ liters, max = 10, size = 160 }: { liters: number; max
         </g>
       </svg>
       <div className="absolute inset-0 flex flex-col items-center justify-center pt-4">
-        <span className="font-display text-4xl font-extrabold drop-shadow">{liters.toFixed(1)}</span>
+        <span className="font-display text-3xl font-bold drop-shadow">{liters.toFixed(1)}</span>
         <span className="text-xs uppercase tracking-widest opacity-80">литров</span>
       </div>
     </div>

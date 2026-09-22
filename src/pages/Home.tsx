@@ -18,7 +18,7 @@ export function Home() {
         <div className="relative mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-2">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .7 }}>
             <p className="mb-3 text-sm uppercase tracking-[.3em] text-teal">Цель устойчивого развития 6</p>
-            <h1 className="text-4xl font-extrabold leading-tight md:text-6xl">Что, если бы у воды был <span className="text-teal">лимит</span>?</h1>
+            <h1 className="text-3xl font-extrabold leading-tight md:text-5xl">Что, если бы у воды был <span className="text-teal">лимит</span>?</h1>
             <p className="mt-5 max-w-lg text-lg text-aqua/80">
               Ты открываешь кран, и вода просто есть. Для четверти планеты день начинается с вопроса: на что потратить 10 литров. Проживи этот день.
             </p>

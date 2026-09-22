@@ -10,7 +10,7 @@ export function Problem() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-12">
       <p className="text-sm uppercase tracking-[.3em] text-teal">Evidence-based</p>
-      <h1 className="mt-2 text-3xl font-extrabold md:text-5xl">Проблема в цифрах</h1>
+      <h1 className="mt-2 text-2xl font-extrabold md:text-4xl">Проблема в цифрах</h1>
       <p className="mt-3 max-w-2xl text-aqua/80">Каждый факт со ссылкой на источник и годом публикации. Нажми на карточку, чтобы перейти к первоисточнику.</p>
 
       <div className="mt-8 flex flex-wrap gap-2">

@@ -7,8 +7,8 @@
   --color-aqua: #A8E6F0;
   --color-sand: #D9B382;
   --color-coral: #F26D6D;
-  --font-display: "Manrope", system-ui, sans-serif;
-  --font-body: "Inter", system-ui, sans-serif;
+  --font-display: "Unbounded", "Arial Black", sans-serif;
+  --font-body: "Golos Text", "Helvetica Neue", Arial, sans-serif;
 }
 
 html { scroll-behavior: smooth; }
@@ -40,3 +40,6 @@ h1, h2, h3, h4 { font-family: var(--font-display); }
 }
 
 .dry { filter: sepia(.7) saturate(.5); transition: filter .3s; }
+
+h1, h2, h3 { letter-spacing: -0.02em; }
+h1 { line-height: 1.1; }

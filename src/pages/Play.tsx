@@ -33,7 +33,7 @@ export function Play() {
   if (!character) {
     return (
       <section className="mx-auto max-w-6xl px-4 py-12">
-        <h1 className="text-3xl font-extrabold md:text-5xl">Один день. Десять литров.</h1>
+        <h1 className="text-2xl font-extrabold md:text-4xl">Один день. Десять литров.</h1>
         <p className="mt-3 max-w-2xl text-aqua/80">
           Выбери, чью жизнь прожить. У каждого одна канистра на сутки и три показателя: вода, здоровье, отношения с людьми. Каждое решение стоит литров. Концовка зависит от того, что останется.
         </p>
