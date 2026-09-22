@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --color-deep: #0B1F3A;
+  --color-deeper: #06142A;
+  --color-teal: #1FB6C1;
+  --color-aqua: #A8E6F0;
+  --color-sand: #D9B382;
+  --color-coral: #F26D6D;
+  --font-display: "Manrope", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--color-deep);
+  color: #e6f4f8;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4 { font-family: var(--font-display); }
+
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(168, 230, 240, 0.15);
+  backdrop-filter: blur(12px);
+}
+
+.wave-divider { display: block; width: 100%; height: 60px; }
+
+@keyframes wave { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+.wave-track { animation: wave 8s linear infinite; }
+.wave-track.slow { animation-duration: 14s; opacity: .6; }
+
+@keyframes ripple { to { transform: scale(4); opacity: 0; } }
+.ripple {
+  position: absolute; border-radius: 9999px; background: rgba(168,230,240,.35);
+  transform: scale(0); animation: ripple .6s ease-out forwards; pointer-events: none;
+}
+
+.dry { filter: sepia(.7) saturate(.5); transition: filter .3s; }
