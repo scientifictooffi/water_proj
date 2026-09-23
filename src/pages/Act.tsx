@@ -15,7 +15,7 @@ export function Act() {
       <h1 className="text-2xl font-extrabold md:text-4xl">Как помочь</h1>
       <p className="mt-3 max-w-2xl text-aqua/80">Три уровня: дом, сообщество, мир. Начни с того, что под рукой.</p>
 
-      <h2 className="mt-12 text-2xl font-bold">🏠 Дома: калькулятор привычек</h2>
+      <h2 className="mt-12 text-2xl font-bold">Дома: калькулятор привычек</h2>
       <div className="mt-4 grid gap-3 md:grid-cols-2">
         {habits.map((h) => {
           const a = on.includes(h.id)
@@ -35,7 +35,7 @@ export function Act() {
         <div className="text-sm text-aqua/80">За год: <b>{(save * 365).toLocaleString('ru')} л</b>. Это {Math.round((save * 365) / 10).toLocaleString('ru')} «игровых» дней для одного человека.</div>
       </div>
 
-      <h2 className="mt-14 text-2xl font-bold">📅 Челлендж на 7 дней</h2>
+      <h2 className="mt-14 text-2xl font-bold">Челлендж на 7 дней</h2>
       <ol className="mt-4 space-y-2">
         {challenge.map((c, i) => {
           const d = done.includes(i)
@@ -51,7 +51,7 @@ export function Act() {
       </ol>
       <p className="mt-2 text-xs text-aqua/50">Выполнено {done.length} из {challenge.length}. Прогресс сохраняется в браузере.</p>
 
-      <h2 className="mt-14 text-2xl font-bold">🌍 Организации, которым можно доверять</h2>
+      <h2 className="mt-14 text-2xl font-bold">Организации, которым можно доверять</h2>
       <div className="mt-4 grid gap-4 md:grid-cols-2">
         {organizations.map((o) => (
           <a key={o.name} href={o.url} target="_blank" rel="noreferrer" className="glass rounded-2xl p-5 transition hover:border-teal/60 hover:bg-white/10">
@@ -61,7 +61,7 @@ export function Act() {
         ))}
       </div>
 
-      <h2 className="mt-14 text-2xl font-bold">🎓 Для учителей и волонтёров</h2>
+      <h2 className="mt-14 text-2xl font-bold">Для учителей и волонтёров</h2>
       <ul className="mt-4 list-disc space-y-2 pl-6 text-aqua/90">
         <li>Проведите игру «Один день» в классе: разделите учеников на трёх персонажей и сравните концовки.</li>
         <li>Обсудите: почему 10 литров не хватает, если ВОЗ называет минимумом 50?</li>

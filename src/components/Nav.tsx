@@ -16,7 +16,7 @@ export function Nav() {
     <header className="sticky top-0 z-50 glass">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         <NavLink to="/" className="flex items-center gap-2 font-display text-lg font-extrabold">
-          <img src="/drop.svg" alt="" className="h-7 w-7" /> Капля <span className="text-xs font-medium text-aqua/70">SDG 6</span>
+          <img src="/logo.png" alt="" className="h-9 w-9 object-contain" /> Капля <span className="text-xs font-medium text-aqua/70">SDG 6</span>
         </NavLink>
         <nav className="hidden gap-1 md:flex">
           {links.map((l) => (

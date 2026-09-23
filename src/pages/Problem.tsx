@@ -9,13 +9,22 @@ export function Problem() {
 
   return (
     <section className="mx-auto max-w-6xl px-4 py-12">
-      <p className="text-sm uppercase tracking-[.3em] text-teal">Evidence-based</p>
-      <h1 className="mt-2 text-2xl font-extrabold md:text-4xl">Проблема в цифрах</h1>
-      <p className="mt-3 max-w-2xl text-aqua/80">Каждый факт со ссылкой на источник и годом публикации. Нажми на карточку, чтобы перейти к первоисточнику.</p>
+      <p className="text-sm uppercase tracking-[.3em] text-teal">Цель 6</p>
+      <h1 className="mt-2 text-2xl font-extrabold md:text-4xl">Устойчивое развитие — чистая вода и санитария</h1>
+      <div className="mt-8 grid gap-8 md:grid-cols-[1fr_1fr] md:items-center">
+        <div className="space-y-3 text-aqua/85">
+          <p>Устойчивое развитие — это подход к развитию общества, при котором удовлетворение потребностей людей сегодня не должно лишать будущие поколения возможности удовлетворять свои собственные потребности.</p>
+          <p>В XX веке стало очевидно, что быстрый рост населения, промышленности и потребления оказывает значительное влияние на окружающую среду.</p>
+          <p>В 1987 году Всемирная комиссия ООН по окружающей среде и развитию опубликовала доклад «Наше общее будущее», в котором устойчивое развитие было определено как развитие, удовлетворяющее потребности настоящего времени без ущерба для способности будущих поколений удовлетворять свои потребности.</p>
+          <p>В 2015 году государства — члены ООН приняли Повестку дня в области устойчивого развития на период до 2030 года. Она включает 17 Целей устойчивого развития — Sustainable Development Goals (SDGs).</p>
+        </div>
+        <img src="/sdgs.png" alt="17 Целей устойчивого развития ООН" className="w-full rounded-2xl bg-white p-3" />
+      </div>
+      <h2 className="mt-16 text-2xl font-bold md:text-3xl">Проблема в цифрах</h2>
 
       <div className="mt-8 flex flex-wrap gap-2">
         {sections.map((s) => (
-          <button key={s.id} onClick={() => setActive(s.id)} className={`rounded-full px-4 py-2 text-sm font-semibold transition ${active === s.id ? 'bg-teal text-deep' : 'glass hover:bg-white/10'}`}>{s.icon} {s.title}</button>
+          <button key={s.id} onClick={() => setActive(s.id)} className={`rounded-full px-4 py-2 text-sm font-semibold transition ${active === s.id ? 'bg-teal text-deep' : 'glass hover:bg-white/10'}`}>{s.title}</button>
         ))}
       </div>
 
@@ -42,8 +51,7 @@ export function Problem() {
             const on = pick.includes(w.item)
             return (
               <button key={w.item} onClick={() => setPick(on ? pick.filter((p) => p !== w.item) : [...pick, w.item])} className={`rounded-xl p-4 text-left transition ${on ? 'bg-teal text-deep' : 'glass hover:bg-white/10'}`}>
-                <div className="text-2xl">{w.emoji}</div>
-                <div className="mt-1 text-sm font-semibold">{w.item}</div>
+                <div className="text-sm font-semibold">{w.item}</div>
                 <div className={`text-xs ${on ? 'text-deep/70' : 'text-aqua/60'}`}>{w.liters.toLocaleString('ru')} л</div>
               </button>
             )
