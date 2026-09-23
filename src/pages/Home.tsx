@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Wave } from '../components/Wave'
-import { Canister } from '../components/Canister'
 import { dailyUse } from '../data/facts'
 import { waterStates, hiddenWater, crisisCauses, kazakhstanWaters } from '../data/home'
 import { Carousel } from '../components/Carousel'
@@ -33,9 +32,8 @@ export function Home() {
       <section className="relative overflow-hidden px-4 pb-8 pt-16 md:pt-28">
         <div className="pointer-events-none absolute inset-0 bg-[url('/hero-bg.jpg')] bg-cover bg-center" aria-hidden />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-deep/40 via-deep/55 to-deep" aria-hidden />
-        <div className="relative mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-2">
+        <div className="relative mx-auto max-w-6xl">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .7 }}>
-            <p className="mb-3 text-sm uppercase tracking-[.3em] text-teal">Цель устойчивого развития 6</p>
             <h1 className="text-3xl font-extrabold leading-tight md:text-5xl">Что, если бы у воды был <span className="text-teal">лимит</span>?</h1>
             <p className="mt-5 max-w-lg text-lg text-aqua/90">
               Вода — химическое соединение, состоящее из водорода и кислорода, которое является одним из основных компонентов живых организмов и природных экосистем.
@@ -44,9 +42,6 @@ export function Home() {
               <Link to="/play" className="rounded-full bg-teal px-6 py-3 font-semibold text-deep shadow-lg shadow-teal/30 transition hover:scale-105">Прожить день →</Link>
               <Link to="/problem" className="rounded-full border border-aqua/40 px-6 py-3 font-semibold transition hover:bg-white/10">Узнать проблему</Link>
             </div>
-          </motion.div>
-          <motion.div className="flex justify-center" initial={{ opacity: 0, scale: .9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: .3, duration: .7 }}>
-            <Canister liters={10} size={200} />
           </motion.div>
         </div>
       </section>
