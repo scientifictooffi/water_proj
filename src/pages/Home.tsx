@@ -16,8 +16,7 @@ function Cards({ items }: { items: { title: string; emoji: string; text: string 
     <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
       {items.map((c, i) => (
         <motion.div key={c.title} className="glass rounded-2xl p-5" initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * .08 }}>
-          <div className="text-3xl">{c.emoji}</div>
-          <h3 className="mt-3 text-lg font-bold">{c.title}</h3>
+          <h3 className="text-lg font-bold">{c.title}</h3>
           <p className="mt-2 text-sm leading-relaxed text-aqua/80">{c.text}</p>
         </motion.div>
       ))}
@@ -54,8 +53,7 @@ export function Home() {
           <p className="mt-3 max-w-3xl text-aqua/80">На Земле вода существует в трёх основных состояниях:</p>
           <div className="mt-6 grid gap-4 sm:grid-cols-3">
             {waterStates.map((s) => (
-              <div key={s.title} className="glass flex items-start gap-4 rounded-2xl p-5">
-                <span className="text-3xl">{s.emoji}</span>
+              <div key={s.title} className="glass rounded-2xl p-5">
                 <div><h3 className="font-bold">{s.title}</h3><p className="mt-1 text-sm text-aqua/80">{s.text}</p></div>
               </div>
             ))}
@@ -105,8 +103,7 @@ export function Home() {
         <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
           {teasers.map((t, i) => (
             <motion.div key={t.stat} className="glass rounded-2xl p-6" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * .1 }}>
-              <div className="text-3xl">{t.icon}</div>
-              <div className="mt-3 font-display text-4xl font-extrabold text-teal">{t.stat}</div>
+              <div className="font-display text-4xl font-extrabold text-teal">{t.stat}</div>
               <p className="mt-1 text-aqua/80">{t.text}</p>
             </motion.div>
           ))}

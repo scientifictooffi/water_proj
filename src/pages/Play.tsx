@@ -42,8 +42,8 @@ export function Play() {
         <div className="mt-10 grid gap-5 md:grid-cols-3">
           {characters.map((c) => (
             <motion.button key={c.id} whileHover={{ y: -6 }} onClick={() => start(c)} className="glass rounded-2xl p-6 text-left transition hover:border-teal/60">
-              <div className="text-5xl">{c.emoji}</div>
-              <h3 className="mt-4 text-xl font-bold">{c.name}</h3>
+              <img src={c.img} alt={c.name} className="mx-auto h-44 w-44 object-contain" />
+              <h3 className="mt-2 text-xl font-bold">{c.name}</h3>
               <p className="text-sm text-teal">{c.place}</p>
               <p className="mt-2 text-sm text-aqua/80">{c.desc}</p>
               <p className="mt-4 text-xs text-aqua/50">Монет на воду: {c.start.money}</p>
@@ -61,7 +61,7 @@ export function Play() {
       </div>
       <div className="grid gap-8 md:grid-cols-[260px_1fr]">
         <aside className="glass flex flex-col items-center gap-6 rounded-2xl p-6 md:sticky md:top-20 md:self-start">
-          <div className="text-center"><div className="text-4xl">{character.emoji}</div><div className="mt-1 text-sm font-semibold">{character.name}</div></div>
+          <div className="text-center"><img src={character.img} alt="" className="mx-auto h-24 w-24 object-contain" /><div className="mt-1 text-sm font-semibold">{character.name}</div></div>
           <Canister liters={Math.max(0, state.water)} />
           <div className="w-full space-y-3">
             <Meter label="Здоровье" value={state.health} icon="❤️" color="bg-coral" />

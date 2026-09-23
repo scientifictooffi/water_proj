@@ -25,6 +25,7 @@ export type Character = {
   desc: string
   start: GameState
   emoji: string
+  img: string
 }
 
 export const characters: Character[] = [
@@ -35,6 +36,7 @@ export const characters: Character[] = [
     desc: 'Ближайший колодец в 4 км. Утро начинается с похода за водой вместо школы.',
     start: { water: 10, health: 70, social: 60, money: 2 },
     emoji: '👧🏾',
+    img: '/chars/amina.png',
   },
   {
     id: 'dana',
@@ -43,6 +45,7 @@ export const characters: Character[] = [
     desc: 'Засуха, вода из крана идёт по графику. Двое детей, работа в поликлинике.',
     start: { water: 10, health: 74, social: 64, money: 6 },
     emoji: '👩🏻',
+    img: '/chars/dana.png',
   },
   {
     id: 'omar',
@@ -51,6 +54,7 @@ export const characters: Character[] = [
     desc: 'Водопровод не работает вторую неделю. Воду продают с грузовиков по 5 рупий за литр.',
     start: { water: 10, health: 65, social: 65, money: 4 },
     emoji: '👨🏽',
+    img: '/chars/omar.png',
   },
 ]
 
