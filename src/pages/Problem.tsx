@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { sections, waterFootprint } from '../data/facts'
+import { sections, waterFootprint, targets } from '../data/facts'
 
 export function Problem() {
   const [active, setActive] = useState(sections[0].id)
@@ -20,6 +20,21 @@ export function Problem() {
         </div>
         <img src="/sdgs.png" alt="17 Целей устойчивого развития ООН" className="w-full rounded-2xl bg-white p-3" />
       </div>
+      <h2 className="mt-16 text-2xl font-bold md:text-3xl">SDG 6 — Чистая вода и санитария</h2>
+      <div className="mt-4 max-w-3xl space-y-3 text-aqua/85">
+        <p>Цель 6 направлена на обеспечение доступности и устойчивого управления водой и санитарией для всех.</p>
+        <p>Она рассматривает не только вопрос наличия воды, но и её качество, доступность, эффективное использование, санитарные условия и сохранение водных экосистем.</p>
+      </div>
+      <h3 className="mt-8 text-xl font-bold">Задачи SDG 6</h3>
+      <div className="mt-4 grid gap-3 md:grid-cols-2">
+        {targets.map((t) => (
+          <div key={t.id} className="glass flex gap-4 rounded-xl p-4">
+            <span className="font-display text-xl font-extrabold text-teal">{t.id}</span>
+            <span className="text-aqua/90">{t.text}</span>
+          </div>
+        ))}
+      </div>
+
       <h2 className="mt-16 text-2xl font-bold md:text-3xl">Проблема в цифрах</h2>
 
       <div className="mt-8 flex flex-wrap gap-2">

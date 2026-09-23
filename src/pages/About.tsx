@@ -1,4 +1,3 @@
-import { targets } from '../data/facts'
 import { loadResults } from '../store/game'
 
 export function About() {
@@ -10,17 +9,7 @@ export function About() {
         «Капля» — интерактивная новелла и справочник по Цели устойчивого развития 6: обеспечить наличие и рациональное использование водных ресурсов и санитарии для всех.
       </p>
 
-      <h2 className="mt-12 text-2xl font-bold">Задачи SDG 6</h2>
-      <div className="mt-4 grid gap-3 md:grid-cols-2">
-        {targets.map((t) => (
-          <div key={t.id} className="glass flex gap-4 rounded-xl p-4">
-            <span className="font-display text-xl font-extrabold text-teal">{t.id}</span>
-            <span className="text-aqua/90">{t.text}</span>
-          </div>
-        ))}
-      </div>
-
-      <h2 className="mt-12 text-2xl font-bold">Откуда цифры в игре</h2>
+      <h2 className="mt-12 text-2xl font-bold">Факты игры</h2>
       <ul className="mt-4 list-disc space-y-2 pl-6 text-aqua/90">
         <li>10 литров в день: нижняя граница «базового доступа» по классификации ВОЗ. Ниже начинаются риски для здоровья.</li>
         <li>50 литров: рекомендуемый ВОЗ минимум для удовлетворения базовых потребностей.</li>
