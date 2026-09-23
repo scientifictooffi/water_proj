@@ -14,9 +14,9 @@ export function Nav() {
   const [open, setOpen] = useState(false)
   return (
     <header className="sticky top-0 z-50 glass">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2">
         <NavLink to="/" className="flex items-center gap-2 font-display text-lg font-extrabold">
-          <img src="/logo.png" alt="SU" className="h-10 w-auto object-contain" />
+          <img src="/logo.png" alt="SU" className="h-14 w-auto object-contain md:h-16" />
         </NavLink>
         <nav className="hidden gap-1 md:flex">
           {links.map((l) => (
