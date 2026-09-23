@@ -34,7 +34,9 @@ export function Play() {
     return (
       <section className="mx-auto max-w-6xl px-4 py-12">
         <h1 className="text-2xl font-extrabold md:text-4xl">Один день. Десять литров.</h1>
-        <p className="mt-3 max-w-2xl text-aqua/80">
+        <p className="mt-4 max-w-2xl text-lg text-aqua/90">Для четверти планеты день начинается с вопроса: на что потратить 10 литров.</p>
+        <p className="mt-3 max-w-2xl text-lg text-aqua/90">Пройди интерактивный эксперимент, который позволяет увидеть привычное использование воды с другой стороны.</p>
+        <p className="mt-6 max-w-2xl text-aqua/80">
           Выбери, чью жизнь прожить. У каждого одна канистра на сутки и три показателя: вода, здоровье, отношения с людьми. Каждое решение стоит литров. Концовка зависит от того, что останется.
         </p>
         <div className="mt-10 grid gap-5 md:grid-cols-3">
