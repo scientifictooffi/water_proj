@@ -12,3 +12,22 @@ export const videos: Video[] = [
 ]
 
 export const topics = ['Все', 'Общая картина', 'Санитария', 'Климат', 'Аральское море']
+
+export const mediaTabs = ['Все', 'Истории людей', 'Исследования', 'Видео', 'Инфографика'] as const
+export type MediaTab = (typeof mediaTabs)[number]
+
+export type MediaItem = { tab: Exclude<MediaTab, 'Все'>; title: string; tag: string; minutes: number; img: string; href?: string }
+
+const articles: MediaItem[] = [
+  { tab: 'Истории людей', title: 'Аральское море: уроки для будущего', tag: 'Экология', minutes: 8, img: '/kz/aral.jpg' },
+  { tab: 'Истории людей', title: 'Вода в степи: как живут с дефицитом', tag: 'Регионы', minutes: 6, img: '/kz/balkhash.jpg' },
+  { tab: 'Исследования', title: 'Очистные сооружения: что важно знать?', tag: 'Инфраструктура', minutes: 5, img: '/kz/syrdarya.jpg' },
+  { tab: 'Исследования', title: 'Трансграничные реки Казахстана', tag: 'Гидрология', minutes: 9, img: '/kz/irtysh.jpg' },
+  { tab: 'Инфографика', title: 'Сколько воды уходит за день', tag: 'Потребление', minutes: 2, img: '/kz/balkhash.jpg' },
+  { tab: 'Инфографика', title: 'Путь воды от реки до крана', tag: 'Водоснабжение', minutes: 3, img: '/kz/irtysh.jpg' },
+]
+
+export const mediaItems: MediaItem[] = [
+  ...articles,
+  ...videos.map((v): MediaItem => ({ tab: 'Видео', title: v.title, tag: v.topic, minutes: v.minutes, img: `https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`, href: `https://www.youtube.com/watch?v=${v.id}` })),
+]

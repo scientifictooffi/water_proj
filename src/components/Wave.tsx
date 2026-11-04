@@ -1,4 +1,4 @@
-export function Wave({ flip = false, color = '#06142A' }: { flip?: boolean; color?: string }) {
+export function Wave({ flip = false, color = '#04222B' }: { flip?: boolean; color?: string }) {
   return (
     <div className={`overflow-hidden leading-none ${flip ? 'rotate-180' : ''}`} aria-hidden>
       <div className="relative h-16 w-full">
